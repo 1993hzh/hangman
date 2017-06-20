@@ -1,0 +1,12 @@
+{"sessionId":"be0774249fd2a50b2f65d699b590b5a3","data":{"totalWordCount":80,"correctWordCount":67,"totalWrongGuessCount":351,"score":989}}
+d5864ba44c34695490a3ab7f951a363a: get score: 868.
+411b9a610ce1372b27588302052ef67c: get score: 762.
+a77cee15b258d7fbd4f9d335e904d189: get score: 768.
+bec0755d63cec7778e568a4c5b4ab5b6: get score: 810.
+16d04a8cdffd4d58666403111145d33f: get score: 846.
+7c068eb6bfcaf64e8dfb5e34a97fc5a1: get score: 979.
+9289d0e8fefcda35bf6479156999a409: get score: 911.
+9e7bb40dc2ed42547311fc65e1eebf89: get score: 790.
+07db01d4a25f5691f6d2b0bbdba0c6dc: get score: 821.
+6556b24769756b11554b83cf0f7d4387: get score: 859.
+f4aa74409b23f760aaa2689e86dec836: get score: 960.
