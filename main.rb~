@@ -1,6 +1,6 @@
 require 'logger'
-require_relative 'hangmanPlay.rb'
-require_relative 'runWithRetry.rb'
+require_relative 'HangmanPlay'
+require_relative 'RunWithRetry'
 
 
 logger = Logger.new(STDOUT)

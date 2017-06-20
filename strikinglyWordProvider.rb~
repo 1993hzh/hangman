@@ -1,5 +1,5 @@
-require_relative 'wordProvider.rb'
-require_relative 'httpClient.rb'
+require_relative 'WordProvider'
+require_relative 'HttpClient'
 
 class StrikinglyWordProvider < WordProvider
 

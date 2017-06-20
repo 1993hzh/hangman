@@ -18,6 +18,7 @@ class Guesser
             letter = decideStrategy(game.word).guess.downcase
         end while @guessedLetters.include? letter && letter != Game::GIVE_UP_FLAG
         @guessedLetters.add(letter)
+        puts letter
         return letter.upcase
     end
     

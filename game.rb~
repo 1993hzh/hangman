@@ -31,6 +31,7 @@ class Game
                 @word = respondWord
                 @wrongGuessCountOfCurrentWord = wrongGuessCount
             end
+            puts @word
         end
         
         return @word, @wrongGuessCountOfCurrentWord

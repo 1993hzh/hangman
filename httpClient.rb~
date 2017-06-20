@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 require "logger"
-require_relative "httpServerError.rb"
+require_relative "HttpServerError"
 
 class HttpClient
 

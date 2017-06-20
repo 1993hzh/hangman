@@ -19,6 +19,7 @@ class FrequencyBasedGuessStrategy < GuessStrategy
         if @frequencyIndex >= @frequency.size
             return Game::GIVE_UP_FLAG
         end
+        puts @frequency.to_a.to_s
         
         letter = @frequency.keys[@frequencyIndex]
         @@logger.info("\'#{letter}\' occurred frequency: #{getCurrent}, total frequency: #{getTotal}, rate: #{getCurrent * 100 / getTotal}%")

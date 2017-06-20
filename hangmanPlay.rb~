@@ -1,9 +1,9 @@
 require 'logger'
-require_relative 'httpClient.rb'
-require_relative 'game.rb'
-require_relative 'runWithRetry.rb'
-require_relative 'strikinglyWordProvider.rb'
-require_relative 'guesser.rb'
+require_relative 'HttpClient'
+require_relative 'Game'
+require_relative 'RunWithRetry'
+require_relative 'StrikinglyWordProvider'
+require_relative 'Guesser'
 
 class HangmanPlay
     TRY_TIMES = 20

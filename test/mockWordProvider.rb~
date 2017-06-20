@@ -1,4 +1,4 @@
-require_relative '../wordProvider.rb'
+require_relative '../WordProvider'
 
 class MockWordProvider < WordProvider
 

@@ -28,7 +28,7 @@ class GameTest < Test::Unit::TestCase
         game = Game.new(Guesser.new, MockWordProvider.new("RHYTHM"), 10)
         word, wrongCount = game.play
         
-        assert_equal(wrongCount, 9)
+        assert_equal(wrongCount, 5)
         assert_equal(word, 'RHYTHM')
         assert(game.guesserWin)
     end
