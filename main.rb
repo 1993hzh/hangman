@@ -1,10 +1,9 @@
-require 'logger'
+require_relative 'log/logManager.rb'
 require_relative 'hangmanPlay.rb'
 require_relative 'runWithRetry.rb'
 
 
-logger = Logger.new(STDOUT)
-logger.level = Logger::INFO
+logger = LogManager.instance.getLogger
 bestScore = 0
 bestSessionId = nil
 hangmanPlay = HangmanPlay.new
@@ -26,7 +25,7 @@ for i in 1..(HangmanPlay::TRY_TIMES)
     end
 end
     
-logger.info("Submit the best score ever got: #{score} in session #{sessionId}")
+logger.info("Submit the best score ever got: #{bestScore} in session #{bestSessionId}")
 
 #RunWithRetry.execute([HttpServerError]) do |try|
 #    hangmanPlay.submitScore(bestSessionId)

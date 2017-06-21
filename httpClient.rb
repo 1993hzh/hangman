@@ -1,12 +1,11 @@
 require 'net/http'
 require 'json'
-require "logger"
+require_relative "log/logManager.rb"
 require_relative "httpServerError.rb"
 
 class HttpClient
 
-    @@logger = Logger.new(STDOUT)
-    @@logger.level = Logger::INFO
+    @@logger = LogManager.instance.getLogger
     
     def initialize(uri)
         @uri = uri

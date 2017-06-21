@@ -1,6 +1,7 @@
+require_relative 'log/logManager.rb'
+
 module RunWithRetry
-    @@logger = Logger.new(STDOUT)
-    @@logger.level = Logger::INFO
+    @@logger = LogManager.instance.getLogger
 
     def self.execute(exceptions, retries: 10, delay: 3)
         try = 0
@@ -10,7 +11,7 @@ module RunWithRetry
             try += 1
             if try <= retries
                 sleep delay
-                @@logger.error("#{e.reason}, retrying..")
+                @@logger.info("#{e.reason}, retrying..")
                 retry
             else
                 raise

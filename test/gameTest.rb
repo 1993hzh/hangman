@@ -7,29 +7,29 @@ require_relative '../invalidGameError.rb'
 class GameTest < Test::Unit::TestCase
 
     def testSimpleWin
-        game = Game.new(Guesser.new, MockWordProvider.new("WORD"), 10)
+        game = Game.new(Guesser.new, MockWordProvider.new("word"), 10)
         word, wrongCount = game.play
         
         assert_equal(wrongCount, 7)
-        assert_equal(word, 'WORD')
+        assert_equal(word, 'word')
         assert(game.guesserWin)
     end
 
     def testMediumWin
-        game = Game.new(Guesser.new, MockWordProvider.new("CORRECT"), 10)
+        game = Game.new(Guesser.new, MockWordProvider.new("correct"), 10)
         word, wrongCount = game.play
         
         assert_equal(wrongCount, 2)
-        assert_equal(word, 'CORRECT')
+        assert_equal(word, 'correct')
         assert(game.guesserWin)
     end
 
     def testHardWin
-        game = Game.new(Guesser.new, MockWordProvider.new("RHYTHM"), 10)
+        game = Game.new(Guesser.new, MockWordProvider.new("rhythm"), 10)
         word, wrongCount = game.play
         
         assert_equal(wrongCount, 9)
-        assert_equal(word, 'RHYTHM')
+        assert_equal(word, 'rhythm')
         assert(game.guesserWin)
     end
     
@@ -41,7 +41,8 @@ class GameTest < Test::Unit::TestCase
     
     def testInvalidGuessTimes
         assert_raise(InvalidGameError) do
-            Game.new(Guesser.new, MockWordProvider.new("INVALID"), -1).play
+            Game.new(Guesser.new, MockWordProvider.new("invalid"), -1).play
         end
     end
+
 end

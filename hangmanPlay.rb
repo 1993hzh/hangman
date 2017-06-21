@@ -1,4 +1,4 @@
-require 'logger'
+require_relative 'log/logManager.rb'
 require_relative 'httpClient.rb'
 require_relative 'game.rb'
 require_relative 'runWithRetry.rb'
@@ -9,8 +9,7 @@ class HangmanPlay
     TRY_TIMES = 20
     SERVER_URI = URI.parse('https://strikingly-hangman.herokuapp.com/game/on')
     
-    @@logger = Logger.new(STDOUT)
-    @@logger.level = Logger::INFO
+    @@logger = LogManager.instance.getLogger
     
     def initialize()
         @httpClient = HttpClient.new(HangmanPlay::SERVER_URI)

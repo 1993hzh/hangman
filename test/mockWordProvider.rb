@@ -14,6 +14,7 @@ class MockWordProvider < WordProvider
     
     def respond(letter)
         #TODO what if guesser guess a letter that already guessed, could be a infinite loop
+        letter = letter.downcase
         if @word.include? letter
             @word.each_char.with_index do |char, index|
                 if char == letter

@@ -1,0 +1,59 @@
+2017-06-21 09:20:34 +0800 INFO: Sending msg: {"playerId": "mail@nleo.me", "action" : "startGame"} to server..
+2017-06-21 09:20:36 +0800 INFO: Receive {"message":"THE GAME IS ON","sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"numberOfWordsToGuess":80,"numberOfGuessAllowedForEachWord":10}} from server.
+2017-06-21 09:20:37 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "nextWord"} to server..
+2017-06-21 09:20:38 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"****","totalWordCount":1,"wrongGuessCountOfCurrentWord":0}} from server.
+2017-06-21 09:20:38 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "E"} to server..
+2017-06-21 09:20:39 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"E***","totalWordCount":1,"wrongGuessCountOfCurrentWord":0}} from server.
+2017-06-21 09:20:39 +0800 INFO: 'a' occurred frequency: 11, total frequency: 102, rate: 10%
+2017-06-21 09:20:39 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "A"} to server..
+2017-06-21 09:20:40 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"E***","totalWordCount":1,"wrongGuessCountOfCurrentWord":1}} from server.
+2017-06-21 09:20:40 +0800 INFO: 'y' occurred frequency: 9, total frequency: 102, rate: 8%
+2017-06-21 09:20:40 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "Y"} to server..
+2017-06-21 09:20:42 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"E***","totalWordCount":1,"wrongGuessCountOfCurrentWord":2}} from server.
+2017-06-21 09:20:42 +0800 INFO: 'r' occurred frequency: 8, total frequency: 102, rate: 7%
+2017-06-21 09:20:42 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "R"} to server..
+2017-06-21 09:20:43 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"ER**","totalWordCount":1,"wrongGuessCountOfCurrentWord":2}} from server.
+2017-06-21 09:20:43 +0800 INFO: 'g' occurred frequency: 2, total frequency: 8, rate: 25%
+2017-06-21 09:20:43 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "G"} to server..
+2017-06-21 09:20:44 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"ERG*","totalWordCount":1,"wrongGuessCountOfCurrentWord":2}} from server.
+2017-06-21 09:20:44 +0800 INFO: 'o' occurred frequency: 1, total frequency: 2, rate: 50%
+2017-06-21 09:20:44 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "O"} to server..
+2017-06-21 09:20:45 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"ERG*","totalWordCount":1,"wrongGuessCountOfCurrentWord":3}} from server.
+2017-06-21 09:20:45 +0800 INFO: 's' occurred frequency: 1, total frequency: 2, rate: 50%
+2017-06-21 09:20:45 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "S"} to server..
+2017-06-21 09:20:46 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"ERGS","totalWordCount":1,"wrongGuessCountOfCurrentWord":3}} from server.
+2017-06-21 09:20:46 +0800 INFO: Game 1: guessed word: ERGS, wrong times: 3, allowed wrong times: 10
+2017-06-21 09:20:46 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "nextWord"} to server..
+2017-06-21 09:20:47 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"****","totalWordCount":2,"wrongGuessCountOfCurrentWord":0}} from server.
+2017-06-21 09:20:47 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "E"} to server..
+2017-06-21 09:20:49 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"****","totalWordCount":2,"wrongGuessCountOfCurrentWord":1}} from server.
+2017-06-21 09:20:49 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "A"} to server..
+2017-06-21 09:20:50 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":1}} from server.
+2017-06-21 09:20:50 +0800 INFO: 'l' occurred frequency: 27, total frequency: 192, rate: 14%
+2017-06-21 09:20:50 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "L"} to server..
+2017-06-21 09:20:51 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":2}} from server.
+2017-06-21 09:20:51 +0800 INFO: 'r' occurred frequency: 20, total frequency: 192, rate: 10%
+2017-06-21 09:20:51 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "R"} to server..
+2017-06-21 09:20:52 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":3}} from server.
+2017-06-21 09:20:52 +0800 INFO: 'n' occurred frequency: 18, total frequency: 192, rate: 9%
+2017-06-21 09:20:52 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "N"} to server..
+2017-06-21 09:20:53 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":4}} from server.
+2017-06-21 09:20:53 +0800 INFO: 'm' occurred frequency: 15, total frequency: 192, rate: 7%
+2017-06-21 09:20:53 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "M"} to server..
+2017-06-21 09:20:54 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":5}} from server.
+2017-06-21 09:20:54 +0800 INFO: 'g' occurred frequency: 14, total frequency: 192, rate: 7%
+2017-06-21 09:20:54 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "G"} to server..
+2017-06-21 09:20:55 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":6}} from server.
+2017-06-21 09:20:55 +0800 INFO: 'b' occurred frequency: 12, total frequency: 192, rate: 6%
+2017-06-21 09:20:55 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "B"} to server..
+2017-06-21 09:20:57 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":7}} from server.
+2017-06-21 09:20:57 +0800 INFO: 'c' occurred frequency: 11, total frequency: 192, rate: 5%
+2017-06-21 09:20:57 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "C"} to server..
+2017-06-21 09:20:58 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A***","totalWordCount":2,"wrongGuessCountOfCurrentWord":8}} from server.
+2017-06-21 09:20:58 +0800 INFO: 'i' occurred frequency: 10, total frequency: 192, rate: 5%
+2017-06-21 09:20:58 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "I"} to server..
+2017-06-21 09:20:59 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A*I*","totalWordCount":2,"wrongGuessCountOfCurrentWord":8}} from server.
+2017-06-21 09:20:59 +0800 INFO: 'm' occurred frequency: 6, total frequency: 22, rate: 27%
+2017-06-21 09:20:59 +0800 INFO: Sending msg: {"sessionId": "5d8525fb27e7d953403aa36e8bf36394","action" : "guessWord","guess" : "M"} to server..
+2017-06-21 09:21:00 +0800 INFO: Receive {"sessionId":"5d8525fb27e7d953403aa36e8bf36394","data":{"word":"A*I*","totalWordCount":2,"wrongGuessCountOfCurrentWord":9}} from server.
+2017-06-21 09:21:00 +0800 INFO: 'r' occurred frequency: 3, total frequency: 22, rate: 13%
