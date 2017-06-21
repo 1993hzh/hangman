@@ -51,7 +51,7 @@ class HangmanPlay
     
     def submitScore(sessionId)
         submitScore = '{"sessionId": "' + sessionId + '","action" : "submitResult"}'
-        res = @httpClient.sendJson(getScore)
+        res = @httpClient.sendJson(submitScore)
         msg = JSON.parse(res)
     end
 end

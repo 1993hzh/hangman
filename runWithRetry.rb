@@ -10,8 +10,8 @@ module RunWithRetry
         rescue *exceptions => e
             try += 1
             if try <= retries
-                sleep delay
                 @@logger.info("#{e.reason}, retrying..")
+                sleep delay
                 retry
             else
                 raise

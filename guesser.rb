@@ -7,25 +7,36 @@ require_relative 'wordProvider.rb'
 
 class Guesser
 
-    THRESHOLD = 1
-
+    THRESHOLD = 3
+    
+    @@ALPHABET_LENGTH = 26
     def initialize()
         @dictionary = Dictionary.new
         @guessedLetters = Set.new
         @lastWord = nil
-        @strategy = TotalFrequencyGuessStrategy.new
+        @totalFrequencyGuessStrategy = TotalFrequencyGuessStrategy.new
+        @strategy = @totalFrequencyGuessStrategy
+        @forceTotalFrequency = false
     end
     
     def guess(game)
         letter = nil
         begin
             letter = decideStrategy(game.word).guess.downcase
-        end while @guessedLetters.include? letter && letter != Game::GIVE_UP_FLAG
+            if letter == Game::GIVE_UP_FLAG
+                @forceTotalFrequency = true
+            end
+        end while @guessedLetters.include? letter || @guessedLetters.size > @@ALPHABET_LENGTH
         @guessedLetters.add(letter)
         return letter.upcase
     end
     
     def decideStrategy(word)
+        if @forceTotalFrequency
+            @strategy = @totalFrequencyGuessStrategy
+            return @strategy
+        end
+    
         if word.chars.select{|c| c != WordProvider::ENCRYPTED_LETTER}.size < THRESHOLD
             return @strategy
         end
