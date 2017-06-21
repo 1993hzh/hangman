@@ -23,7 +23,7 @@ class Game
         end
     
         while !isOver do
-            letter = @guesser.guess(self)
+            letter = @guesser.guess(word)
             if letter == GIVE_UP_FLAG
                 @guesserGiveUp = true
             else

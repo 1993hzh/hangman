@@ -27,8 +27,11 @@ class DataTraining
                 @@logger.info("Word: \"#{key}\", wrongCount: #{gameResult[key]}")
             end
         end
+        
         failedSize = gameResult.keys.select{|key| key.include?('*')}.to_a.size
-        @@logger.info("Total fail #{failedSize} in 1000 given words.")
+        guessedWords = gameResult.values.select{|v| v < 10}
+        wrongCountAvg = guessedWords.inject(0.0) { |sum, el| sum + el } / guessedWords.size
+        @@logger.info("Average wrongCount for guessed out words: #{wrongCountAvg}, total fail #{failedSize} in 1000 given words.")
     end
         
     class WordSet

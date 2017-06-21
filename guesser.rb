@@ -1,52 +1,69 @@
 require 'set'
 require_relative 'game.rb'
 require_relative 'frequencyBasedGuessStrategy.rb'
-require_relative 'totalFrequencyGuessStrategy.rb'
+require_relative 'dictionaryBasedGuessStrategy.rb'
 require_relative 'dictionary.rb'
 require_relative 'wordProvider.rb'
 
 class Guesser
 
     THRESHOLD = 3
+    ALPHABET_LENGTH = 26
     
-    @@ALPHABET_LENGTH = 26
     def initialize()
         @dictionary = Dictionary.new
         @guessedLetters = Set.new
         @lastWord = nil
-        @totalFrequencyGuessStrategy = TotalFrequencyGuessStrategy.new
-        @strategy = @totalFrequencyGuessStrategy
-        @forceTotalFrequency = false
+        @frequencyBasedGuessStrategy = FrequencyBasedGuessStrategy.new
+        @strategy = @frequencyBasedGuessStrategy
+        @forceFrequency = false
     end
     
-    def guess(game)
+    def guess(word)
         letter = nil
         begin
-            letter = decideStrategy(game.word).guess.downcase
+            letter = decideStrategy(word).guess.downcase
             if letter == Game::GIVE_UP_FLAG
-                @forceTotalFrequency = true
+                @forceFrequency = true
             end
-        end while @guessedLetters.include? letter || @guessedLetters.size > @@ALPHABET_LENGTH
+        end while needMoreGuess(letter)
         @guessedLetters.add(letter)
         return letter.upcase
     end
     
+    def needMoreGuess(letter)
+        #TODO in case of infinite loop
+        @guessedLetters.include? letter || letter == Game::GIVE_UP_FLAG
+    end
+    
     def decideStrategy(word)
-        if @forceTotalFrequency
-            @strategy = @totalFrequencyGuessStrategy
+        if @forceFrequency
+            @strategy = @frequencyBasedGuessStrategy
             return @strategy
         end
     
         if word.chars.select{|c| c != WordProvider::ENCRYPTED_LETTER}.size < THRESHOLD
+            @strategy = @frequencyBasedGuessStrategy
             return @strategy
         end
         
         if word != @lastWord
             @lastWord = word
-            frequency = @dictionary.collectFrequency(word)
-            @strategy = FrequencyBasedGuessStrategy.new(frequency)
+            @strategy = DictionaryBasedGuessStrategy.new(@dictionary.collect(word))
         end
         
         return @strategy
+    end
+    
+    def getThreshold(length)
+        if length <= 5
+            return 2
+        elsif length <= 8
+            return 1
+        elsif length <= 12
+            return 1
+        else
+            return 0
+        end
     end
 end

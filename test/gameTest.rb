@@ -10,7 +10,7 @@ class GameTest < Test::Unit::TestCase
         game = Game.new(Guesser.new, MockWordProvider.new("word"), 10)
         word, wrongCount = game.play
         
-        assert_equal(wrongCount, 7)
+        assert_equal(wrongCount, 9)
         assert_equal(word, 'word')
         assert(game.guesserWin)
     end
@@ -19,7 +19,7 @@ class GameTest < Test::Unit::TestCase
         game = Game.new(Guesser.new, MockWordProvider.new("correct"), 10)
         word, wrongCount = game.play
         
-        assert_equal(wrongCount, 2)
+        assert_equal(wrongCount, 1)
         assert_equal(word, 'correct')
         assert(game.guesserWin)
     end
@@ -28,9 +28,9 @@ class GameTest < Test::Unit::TestCase
         game = Game.new(Guesser.new, MockWordProvider.new("rhythm"), 10)
         word, wrongCount = game.play
         
-        assert_equal(wrongCount, 9)
-        assert_equal(word, 'rhythm')
-        assert(game.guesserWin)
+        assert_equal(wrongCount, 10)
+        assert_equal(word, 'r**t**')
+        assert(game.wordProviderWin)
     end
     
     def testInvalidWord

@@ -10,9 +10,9 @@ class Dictionary
         @currentWordSet = Dictionary::WordSet.instance.all.dup
     end
 
-    def collectFrequency(word)
+    def collect(word)
         reg = Regexp.new("^#{word.dup.gsub!(WordProvider::ENCRYPTED_LETTER, LETTER_PATTERN).downcase}$").freeze
-        @currentWordSet = @currentWordSet.select{|w| w.match?(reg)}
+        @currentWordSet = @currentWordSet.select{|w| w.match?(reg)}.to_set
 
         wordFrequency = Hash.new
         index = word.index(WordProvider::ENCRYPTED_LETTER)
@@ -25,6 +25,8 @@ class Dictionary
         
         return wordFrequency.sort_by {|_key, value| value}.reverse.to_h
     end
+    
+    attr_reader :currentWordSet
     
     class WordSet
         include Singleton
